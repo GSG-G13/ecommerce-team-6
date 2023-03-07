@@ -1,0 +1,110 @@
+/* Custome Page Style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#customer {
+  background-color: #fafafacf;
+}
+#customer .container {
+  width: 80%;
+  padding: 15px;
+  margin: 0 15px;
+  margin: auto;
+}
+#customer .header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+#customer .header .search {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+#customer a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #4CAF50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  padding: 0 15px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+#customer .search:focus {
+  outline: none;
+}
+#customer .filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#customer .filter select {
+  padding: 5px;
+  border-radius: 7px;
+}
+#customer .filter > div {
+  padding: 0 20px;
+}
+#customer .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+#customer .card {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px #0000004a;
+  justify-self: center;
+}
+#customer .card img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: auto;
+}
+#customer .card .name,
+#customer .card .category {
+  font-weight: bold;
+  margin: 10px 0;
+}
+#customer .card .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#customer .card .info i {
+  cursor: pointer;
+  color: #4CAF50;
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  #customer .filter {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #customer .filter {
+    text-align: center;
+  }
+  #customer .filter label {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 5px;
+  }
+  #customer .filter select {
+    width: 150px;
+  }
+}
