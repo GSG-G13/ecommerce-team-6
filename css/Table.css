@@ -2,8 +2,9 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-.add{
+.add-product{
     background-color: royalblue;
     padding: 10px;
     border: royalblue;
@@ -127,3 +128,82 @@ table {
 .fa-pen-to-square{
     color: blue;
 }
+
+/* start popup */
+.page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container .popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  margin: 60px auto;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+  display: none;
+  z-index: 90;
+}
+
+.container .popup form div {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container .popup form label {
+  font-weight: bold;
+}
+.container .popup form input {
+  outline: none;
+  border: none;
+  border: 1px solid darkgray;
+  padding: 5px 15px;
+}
+
+.container .popup form input:focus {
+  border: 1px solid #111;
+}
+
+.container .popup form textarea {
+  outline: none;
+  border: none;
+  border: 1px solid darkgray;
+  padding: 5px 15px;
+}
+
+.container .popup form select {
+  outline: none;
+  border: none;
+  border: 1px solid darkgray;
+  padding: 5px 15px;
+}
+
+.container .popup form textarea:focus {
+  border: 1px solid #111;
+}
+
+.container .popup form button {
+  border: none;
+  padding: 5px 15px;
+  border-radius: 3px;
+  background-color: #111;
+  cursor: pointer;
+  color: white;
+}
+/* end popup */
