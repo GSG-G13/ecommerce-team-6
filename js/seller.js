@@ -113,7 +113,6 @@ function onEdite(e) {
 function onDelete(e) {
   let index = e.target.dataset.index;
   console.log(index);
-  product.splice(index, 1);
-
+  deleteItem(product, index)
   readData();
 }
