@@ -24,17 +24,9 @@
               <label>Name</label>
               <input type="text" name="name" id="name" />
             </div>
-            <div class="detail">
-              <label>Details</label>
-              <textarea name="detail" id="detail" cols="30" rows="3"></textarea>
-            </div>
             <div class="price">
               <label>Price</label>
               <input type="number" name="price" id="price" />
-            </div>
-            <div class="img">
-              <label>Image</label>
-              <input type="url" name="img" id="img" />
             </div>
             <div class="img">
               <label>Image</label>
@@ -48,7 +40,7 @@
                 <option value="jeans">jeans</option>
               </select>
             </div>
-            <button id="submit-product">Submit Product</button>
+            <button type="submit" id="submit-product">Submit Product</button>
           </form>
         </div>
         <!-- end popup -->
@@ -63,36 +55,13 @@
         </div>
 
         <!-- ------- Here goes the loop -----  -->
-        <div class="table-tbody mt-2">
-          <div class="td-img">
-            <img
-              src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            />
-          </div>
-          <div class="td">Pancakes</div>
-          <div class="td-flex">5,00 €</div>
-          <div class="td-flex">category</div>
-          <div class="td-last justify-content-end">
-            <i class="fa-solid fa-trash"></i>
-            <i class="fa-solid fa-pen-to-square"></i>
-          </div>
-        </div>
-        <div class="table-tbody mt-2">
-          <div class="td-img">
-            <img
-              src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-            />
-          </div>
-          <div class="td">Pancakes</div>
-          <div class="td-flex">5,00 €</div>
-          <div class="td-flex">detail</div>
-          <div class="td-last justify-content-end">
-            <i class="fa-solid fa-trash"></i>
-            <i class="fa-solid fa-pen-to-square"></i>
-          </div>
-        </div>
+        <section id="badyTable">
+
+          <div class="table-tbody mt-2">
+        </section>
       </div>
     </div>
+    <script src="js/seller.js"></script>
     <script src="js/popup.js"></script>
   </body>
 </html>
