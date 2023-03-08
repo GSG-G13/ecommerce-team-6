@@ -1,0 +1,172 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+  background-color: #1a1b1f;
+  color: #8a8a8a;
+
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+}
+
+.tabs-container {
+  width: 540px;
+  max-width: 620px;
+  min-width: 420px;
+  margin: auto;
+}
+
+.tabs {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tabs a {
+  cursor: pointer;
+  padding: 12px 24px;
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 18px;
+  transition: background 0.1s, color 0.1s;
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+  box-shadow: 3px 3px 6px #101114, -3px -3px 6px #24252a;
+}
+
+.tabs a:hover {
+  background: #141414;
+  color: #bbb;
+}
+
+.tabs a.active {
+  cursor: default;
+  padding: 14px 22px 10px 26px;
+  background: #1a1b1f;
+  box-shadow: inset 3px 3px 6px #101114, inset -3px -3px 6px #24252a;
+  color: #6a6a6a;
+}
+
+.tabcontent {
+  padding: 46px;
+  min-height: 288px;
+  display: none;
+  border-radius: 18px;
+  /* background: #f4f4f4;
+  box-shadow: 3px 3px 6px #bebebe,
+    -3px -3px 6px #ffffff; */
+  background: linear-gradient(145deg, #1c1d21, #17181c);
+  box-shadow: 3px 3px 6px #101114, -3px -3px 6px #24252a;
+}
+
+.content .active {
+  display: block;
+}
+
+form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+  margin: 0 auto;
+}
+form * {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+::placeholder {
+  color: #e5e5e5;
+}
+button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.sign > button {
+  /* background-color: #080710;
+  color: #ffffff; */
+}
+button.guest {
+  background-color: #ffffff;
+  color: #080710;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #080710;
+  color: #ffffff;
+}
+
+@media (width < 768px) {
+  form {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 50px 20px;
+  }
+
+  .tabcontent {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 5px;
+  }
+  .tabs-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
