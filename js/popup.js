@@ -16,10 +16,8 @@ submitProduct.addEventListener("click", closePopup);
 overlay.addEventListener("click", closeOverlay);
 
 function closePopup() {
-  if (title.value !== "") {
     closeOverlay();
-  }
-  title.focus();
+  
 }
 
 function closeOverlay() {
