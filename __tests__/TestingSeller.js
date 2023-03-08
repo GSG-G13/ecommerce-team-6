@@ -1,4 +1,4 @@
-const deleteItem = require("../js/helpers");
+const {deleteItem} = require("../js/helpers");
 describe("delete item", () => {
   test("should returen true ", () => {
     const actual = deleteItem([1, 2, 3, 4, 5], 2);

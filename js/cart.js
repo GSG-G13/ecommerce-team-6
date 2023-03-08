@@ -16,12 +16,13 @@ let sum = products.reduce((a, b) => a + +b.price, 0);
 total.textContent = `Order Total : $${sum}`;
 
 // cartBtn.addEventListener("click", addToCart);
-const cartsContainer = document.querySelector(".mainContainer");
+let cartsContainer = document.querySelector(".mainContainer");
 function addToCart() {
   cartsContainer.innerHTML = "";
   products.forEach((item, i) => {
     let contentDiv = document.createElement("div");
     contentDiv.className = "content";
+    cartsContainer.appendChild(contentDiv);
 
     let imgDiv = document.createElement("div");
     imgDiv.className = "image";
@@ -45,23 +46,23 @@ function addToCart() {
     contentDiv.appendChild(del);
     del.id = i;
     del.addEventListener("click", (e) => {
-      deleteCart(e);
       contentDiv.remove();
+      deleteCart(e);
+      console.log(contentDiv);
     });
-    cartsContainer.appendChild(contentDiv)
   });
 }
 addToCart();
 
 function deleteCart(e) {
-  let ele = e.target.id;
-
-products.splice(ele,1);
+let ele = e.target.id;
+const filterdArray = deleteRecord(products,ele)
+localStorage.setItem("cartProducts", JSON.stringify(filterdArray));
 mainProducts[ele].inCart = false;
 let sum = products.reduce((a, b) => a + +b.price, 0);
 total.textContent = `Order Total : $${sum}`;
-  localStorage.setItem("cartProducts", JSON.stringify(products));
   localStorage.setItem("product", JSON.stringify(mainProducts));
   addToCart();
+  location.reload();
 }
 
