@@ -153,14 +153,12 @@ header {
 
 .container .bootom button:first-child {
   background-color: var(--primary-color);
-  color: white;
   margin: 10px;
 }
-.container .bootom button:last-child {
-  background-color: var(--danger-color);
+.container .bootom button a {
   color: white;
-  margin: 10px;
 }
+
 
 .total {
   display: inline-block;
