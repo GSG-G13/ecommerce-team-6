@@ -13,7 +13,7 @@ function showProducts() {
     productContainer.className = "product";
     // Create Product Img
     const productImg = document.createElement("img");
-    productImg.src = product.image;
+    productImg.src = product.img;
     // Create Product Name
     const productName = document.createElement("div");
     productName.className = "name";
