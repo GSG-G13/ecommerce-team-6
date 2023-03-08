@@ -1,52 +1,12 @@
-const products = [
-  {
-    id: 0,
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    name: "Fjallraven",
-    category: "men's clothing",
-    price: 20,
-    isInCart: false,
-  },
-  {
-    id: 1,
-    image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-    name: "Mens Cotton",
-    category: "men's clothing",
-    price: 30,
-    isInCart: false,
-  },
-  {
-    id: 2,
-    image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-    name: "WD 2TB Elements",
-    category: "electronics",
-    price: 64,
-    isInCart: false,
-  },
-  {
-    id: 3,
-    image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
-    name: "Rain Jacket",
-    category: "women's clothing",
-    price: 20,
-    isInCart: false,
-  },
-];
-const cartProducts = [];
-
-/* <div class="card">
-  <img src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg" alt="product">
-  <div class="name">Mens Casual Slim Fit</div>
-  <div class="category">men's clothing</div>
-  <div class="info">
-    <div class="price">20$</div>
-    <i class="fa-solid fa-cart-plus"></i>
-  </div>
-</div> */
-
+let products = JSON.parse(localStorage.getItem("product"));
+let cartProducts = JSON.parse(localStorage.getItem("cartProducts"));
+if (cartProducts === null) {
+  cartProducts = [];
+}
 const productsContainer = document.querySelector("#customer .products");
-function showProducts(products) {
+function showProducts() {
   productsContainer.innerHTML = "";
+  localStorage.setItem("product", JSON.stringify(products));
   products.forEach((product, i) => {
     // Create Product Container
     const productContainer = document.createElement("div");
@@ -73,7 +33,7 @@ function showProducts(products) {
     productPrice.append(productPriceText);
     // Create Product Add to Cart Icon
     const addCart = document.createElement("i");
-    product.isInCart
+    product.inCart
       ? (addCart.className = "fa-solid fa-check")
       : (addCart.className = "fa-solid fa-cart-plus");
     addCart.dataset.productIndex = i;
@@ -88,17 +48,21 @@ function showProducts(products) {
     productsContainer.appendChild(productContainer);
   });
 }
-showProducts(products);
+showProducts();
 
 function handleAddToCart(e) {
   let product = e.target;
   let productIndex = product.dataset.productIndex;
   if (product.classList.contains("fa-cart-plus")) {
     product.className = "fa-solid fa-check";
-    products[productIndex].isInCart = !products[productIndex].isInCart;
+    products[productIndex].inCart = !products[productIndex].inCart;
+    cartProducts.push(products[productIndex]);
+    console.log(cartProducts);
   } else if (product.classList.contains("fa-check")) {
     product.className = "fa-solid fa-cart-plus";
-    products[productIndex].isInCart = !products[productIndex].isInCart;
+    products[productIndex].inCart = !products[productIndex].inCart;
+    cartProducts.splice(productIndex, 1);
   }
-  showProducts(products);
+  localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  showProducts();
 }
