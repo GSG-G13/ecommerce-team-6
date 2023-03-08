@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STORE</title>
+    <link rel="stylesheet" href="css/landing.css" />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="tabs" class="tabs-container">
+        <div class="tabs">
+          <a id="tab1" data-tab="1" class="tab">Seller</a>
+          <a id="tab2" data-tab="2" class="tab">Client</a>
+        </div>
+        <div class="content">
+          <div id="tabcontent1" data-tab="1" class="tabcontent active">
+            <form id="f-s">
+              <h3>Admin</h3>
+              <label for="username">Username</label>
+              <input
+                type="text"
+                placeholder="Email"
+                id="username"
+                value="admin@mail.com"
+              />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Password"
+                id="s-password"
+                value=""
+              />
+              <button id="s-login-button">Log In</button>
+            </form>
+          </div>
+          <div id="tabcontent2" data-tab="2" class="tabcontent">
+            <form id="f-c">
+              <h3>Client</h3>
+              <label for="username">Username</label>
+              <input type="text" placeholder="Email" id="c-username" value="" />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Password"
+                id="c-password"
+                value=""
+              />
+              <div class="sign">
+                <button id="signin-btn">Sign In</button>
+                <button id="signup-btn">Sign Up</button>
+              </div>
+              <button class="guest" id="guest-btn">Guest</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/landing.js"></script>
+  </body>
 </html>
