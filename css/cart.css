@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Global Rools */
@@ -49,12 +49,11 @@ header {
   }
 }
 
-.container {
-  margin-top: 40px;
-}
-
 .container .top {
-  margin: 40px;
+  padding: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent transparent lightgray;
 }
 
 .container .top ul {
@@ -63,21 +62,20 @@ header {
   align-items: center;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .container .top ul {
     justify-content: space-between;
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .container .top {
     display: none;
   }
 }
 
 .container .top ul li {
-  width: 200px;
-  margin: auto;
+  text-align: center;
   font-weight: bold;
 }
 
@@ -85,19 +83,16 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-width: 2px;
-  border-style: solid;
-  border-color: lightgray transparent;
-  padding: 20px 0;
-  margin: 20px;
-}
-
-.container .content div {
   text-align: center;
+  padding: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent transparent lightgray;
 }
 
 .container .content span {
   color: var(--primary-color);
+  font-weight: bold;
 }
 
 .container .content i {
@@ -106,13 +101,13 @@ header {
   cursor: pointer;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .container .content {
     justify-content: space-between;
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .container .content {
     height: 250px;
     flex-direction: column;
@@ -128,42 +123,36 @@ header {
 }
 
 .container .content .image {
-  width: 180px;
-  height: 150px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .container .content .image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
-
 
 .container .bootom {
   padding: 40px 60px;
 }
 
 .container .bootom .btns {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
-.container .bootom button:first-child {
+.container .bootom button {
   background-color: var(--primary-color);
-  margin: 10px;
 }
 .container .bootom button a {
   color: white;
 }
-
-
 .total {
   display: inline-block;
-  padding: 50px;
-  border: 3px solid var(--primary-color);
-  margin-top: 60px;
+  padding: 30px;
+  color: #333;
+  border: 2px solid var(--primary-color);
+  margin-top: 50px;
   border-radius: 10px;
 }

@@ -3,7 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 #customer {
   background-color: #fafafacf;
@@ -25,11 +25,12 @@
   font-size: 16px;
   border-radius: 10px;
   border: none;
+  box-shadow: 0px 0px 10px rgb(207 207 207);
 }
 #customer a {
   text-decoration: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,14 +40,13 @@
   cursor: pointer;
   border-radius: 7px;
 }
-
 #customer .search:focus {
   outline: none;
 }
 #customer .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 #customer .filter select {
   padding: 5px;
@@ -64,7 +64,7 @@
   background-color: #fff;
   padding: 20px 30px;
   border-radius: 7px;
-  box-shadow: 0px 0px 10px #0000004a;
+  box-shadow: 0px 0px 10px rgb(207 207 207);
   justify-self: center;
 }
 #customer .product img {
@@ -88,7 +88,7 @@
 }
 #customer .product .info i {
   cursor: pointer;
-  color: #4CAF50;
+  color: #4caf50;
   font-size: 18px;
 }
 @media (max-width: 600px) {
