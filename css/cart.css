@@ -59,17 +59,17 @@ header {
 
 .container .top ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .container .top ul {
     justify-content: space-between;
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .container .top {
     display: none;
   }
@@ -79,6 +79,7 @@ header {
   width: 200px;
   margin: auto;
   font-weight: bold;
+  text-align: center;
 }
 
 .container .content {
@@ -90,6 +91,7 @@ header {
   border-color: lightgray transparent;
   padding: 20px 0;
   margin: 20px;
+  height: 200px;
 }
 
 .container .content div {
@@ -98,23 +100,25 @@ header {
 
 .container .content span {
   color: var(--primary-color);
+  text-align: center;
 }
 
 .container .content i {
   color: var(--danger-color);
   font-size: 20px;
   cursor: pointer;
+  text-align: center;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .container .content {
     justify-content: space-between;
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .container .content {
-    height: 250px;
+    height: 360px;
     flex-direction: column;
     text-align: center;
   }
@@ -128,17 +132,17 @@ header {
 }
 
 .container .content .image {
-  width: 180px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
 }
 
 .container .content .image img {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
 }
-
 
 .container .bootom {
   padding: 40px 60px;
@@ -151,15 +155,14 @@ header {
   flex-wrap: wrap;
 }
 
-.container .bootom button:first-child {
+.container .bootom button {
   background-color: var(--primary-color);
   color: white;
   margin: 10px;
 }
-.container .bootom button:last-child {
-  background-color: var(--danger-color);
+
+.container .bootom button a {
   color: white;
-  margin: 10px;
 }
 
 .total {
