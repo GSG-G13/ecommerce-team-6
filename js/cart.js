@@ -66,3 +66,8 @@ total.textContent = `Order Total : $${sum}`;
   location.reload();
 }
 
+// Make Function Puer
+let deleteRecord = (arr, index) => {
+  const newArray =  arr.filter((e, i) => i != index );
+  return newArray;
+}
