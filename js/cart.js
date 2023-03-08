@@ -1,4 +1,3 @@
-// let cartBtn = document.getElementById("cart-btn");
 let cart = document.querySelector(".cart");
 
 let total = document.querySelector(".total h3");
@@ -56,15 +55,11 @@ addToCart();
 
 function deleteCart(e) {
   let ele = e.target.id;
-
-products.splice(ele,1);
-mainProducts[ele].inCart = false;
-  // const filteredArr = deleteRecord(arr, ele);
+  products.splice(ele, 1);
+  mainProducts[ele].inCart = false;
+  let sum = products.reduce((a, b) => a + +b.price, 0);
+  total.textContent = `Order Total : $${sum}`;
   localStorage.setItem("cartProducts", JSON.stringify(products));
   localStorage.setItem("product", JSON.stringify(mainProducts));
   addToCart();
-  // products.filter((item) => ele == item.id);
 }
-
-// const deleteRecord = (arr, idToDelete) =>
-//   arr.filter((product) => product.id !== idToDelete);
