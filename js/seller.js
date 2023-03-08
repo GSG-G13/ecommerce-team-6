@@ -5,13 +5,11 @@ let category = document.getElementById("category");
 let submit = document.getElementById("submit-product");
 let sec = document.getElementById("badyTable");
 
-let product;
 let mood = "add";
 let temp;
 
-if (localStorage.product != null) {
-  product = JSON.parse(localStorage.product);
-} else {
+let product = JSON.parse(localStorage.getItem("product"));
+if (product === null) {
   product = [];
 }
 submit.onclick = function (eo) {
@@ -21,16 +19,14 @@ submit.onclick = function (eo) {
     price: price.value,
     img: img.value,
     category: category.value,
-    inCart:false,
+    inCart: false,
   };
 
   if (mood == "add") {
     product.push(newpro);
-    console.log(mood);
   } else {
     product[temp] = newpro;
   }
-  localStorage.setItem("product", JSON.stringify(product));
   readData();
   clearinp();
 };
@@ -112,6 +108,7 @@ function onEdite(e) {
   img.value = product[index].img;
   category.value = product[index].category;
   temp = index;
+  readData();
 }
 function onDelete(e) {
   let index = e.target.dataset.index;
