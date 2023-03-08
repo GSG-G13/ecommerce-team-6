@@ -55,38 +55,38 @@
 #customer .filter > div {
   padding: 0 20px;
 }
-#customer .cards {
+#customer .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
 }
-#customer .card {
+#customer .product {
   background-color: #fff;
   padding: 20px 30px;
   border-radius: 7px;
   box-shadow: 0px 0px 10px #0000004a;
   justify-self: center;
 }
-#customer .card img {
+#customer .product img {
   display: block;
   width: 150px;
   height: 150px;
   object-fit: contain;
   margin: auto;
 }
-#customer .card .name,
-#customer .card .category {
+#customer .product .name,
+#customer .product .category {
   font-weight: bold;
   margin: 10px 0;
 }
-#customer .card .info {
+#customer .product .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
   margin-top: 20px;
 }
-#customer .card .info i {
+#customer .product .info i {
   cursor: pointer;
   color: #4CAF50;
   font-size: 18px;
