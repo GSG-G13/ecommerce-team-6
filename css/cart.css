@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #219224;
+  --danger-color: #f44336;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Global Rools */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 8px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Start Style */
+header {
+  padding: 30px 60px;
+  background-color: #ddd;
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 20px;
+    background-color: lavender;
+  }
+  header h1 {
+    text-align: center;
+    font-size: 24;
+  }
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.container .top {
+  margin: 40px;
+}
+
+.container .top ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media(max-width: 991px) {
+  .container .top ul {
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 767px) {
+  .container .top {
+    display: none;
+  }
+}
+
+.container .top ul li {
+  width: 200px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.container .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: lightgray transparent;
+  padding: 20px 0;
+  margin: 20px;
+}
+
+.container .content div {
+  text-align: center;
+}
+
+.container .content span {
+  color: var(--primary-color);
+}
+
+.container .content i {
+  color: var(--danger-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media(max-width: 991px) {
+  .container .content {
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 767px) {
+  .container .content {
+    height: 250px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.container .content div,
+.container .content span,
+.container .content i {
+  width: 200px;
+  margin: auto;
+}
+
+.container .content .image {
+  width: 180px;
+  height: 150px;
+}
+
+.container .content .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.container .bootom {
+  padding: 40px 60px;
+}
+
+.container .bootom .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .bootom button:first-child {
+  background-color: var(--primary-color);
+  color: white;
+  margin: 10px;
+}
+.container .bootom button:last-child {
+  background-color: var(--danger-color);
+  color: white;
+  margin: 10px;
+}
+
+.total {
+  display: inline-block;
+  padding: 50px;
+  border: 3px solid var(--primary-color);
+  margin-top: 60px;
+  border-radius: 10px;
+}
