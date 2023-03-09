@@ -3,17 +3,24 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.add-product{
-    background-color: royalblue;
-    padding: 10px;
-    border: royalblue;
-    color: white;
-    margin: 5px;
+.page {
+  padding: 20px;
 }
-button{
-    padding: 10;
-    border-radius: 5px;
+h1 {
+  color: #333;
+}
+.add-product {
+  background-color: #219224;
+  padding: 10px;
+  border: #219224;
+  color: white;
+  margin: 5px;
+}
+button {
+  padding: 10;
+  border-radius: 5px;
 }
 .table-flex {
   display: flex;
@@ -73,10 +80,7 @@ button{
 img {
   width: 80px;
   height: 80px;
-  border-radius: 5px;
-  background: #000;
-  object-fit: cover;
-  overflow: hidden;
+  object-fit: contain;
 }
 
 /* ++++++++++++++++++++++++++++++++++++++ */
@@ -121,12 +125,12 @@ table {
   text-align: end;
   padding: 10px;
 }
-.fa-trash{
-    color: red;
-    cursor: pointer;
+.fa-trash {
+  color: red;
+  cursor: pointer;
 }
-.fa-pen-to-square{
-    color: blue;
+.fa-pen-to-square {
+  color: blue;
 }
 
 /* start popup */
